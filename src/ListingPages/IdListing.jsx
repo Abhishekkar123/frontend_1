@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-
+const apiUrl = import.meta.env.VITE_API_URL;
 function IdListing() {
   const { id } = useParams();
   const [data, setData] = useState(null);
@@ -10,7 +10,7 @@ function IdListing() {
   useEffect(() => {
     // Fetch property details from the backend using Axios
     axios
-      .get(`http://localhost:8000/listing-property/${id}`)
+      .get(`${apiUrl}/listing-property/${id}`)
       .then((response) => {
         console.log(response.data);
         setData(response.data);
