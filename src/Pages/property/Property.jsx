@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import FormControl from 'react-bootstrap/FormControl';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+const apiUrl = import.meta.env.VITE_API_URL;
 function Property() {
   const navigate = useNavigate();
   const [properties, setProperties] = useState([]);
@@ -13,7 +13,7 @@ function Property() {
 
   // Fetch properties from the backend
   useEffect(() => {
-    axios.get('http://localhost:8000/listing-property')
+    axios.get(`${apiUrl}/listing-property`)
       .then((response) => {
         console.log(response.data);
         setProperties(response.data);
