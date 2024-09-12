@@ -1,8 +1,9 @@
 import axios from 'axios';
 const apiUrl = import.meta.env.VITE_API_URL;
 console.log(apiUrl)
+//localhost=>backend(deploy)
 
-const URL=apiUrl;
+const URL='https://backen-1.onrender.com';
 
 export const authenticate=async (data)=>{
     try{
