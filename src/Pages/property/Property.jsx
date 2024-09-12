@@ -5,6 +5,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 const apiUrl = import.meta.env.VITE_API_URL;
+console.log("apiUrl",apiUrl)
 function Property() {
   const navigate = useNavigate();
   const [properties, setProperties] = useState([]);
