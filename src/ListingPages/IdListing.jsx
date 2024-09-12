@@ -10,7 +10,7 @@ function IdListing() {
   useEffect(() => {
     // Fetch property details from the backend using Axios
     axios
-      .get(`${apiUrl}/listing-property/${id}`)
+      .get(`https://backen-1.onrender.com/listing-property/${id}`)
       .then((response) => {
         console.log(response.data);
         setData(response.data);

@@ -14,7 +14,7 @@ function Property() {
 
   // Fetch properties from the backend
   useEffect(() => {
-    axios.get(`${apiUrl}/listing-property`)
+    axios.get(`https://backen-1.onrender.com/listing-property`)
       .then((response) => {
         console.log(response.data);
         setProperties(response.data);
